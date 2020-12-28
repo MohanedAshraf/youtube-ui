@@ -1,0 +1,111 @@
+.navbar-container {
+  position: sticky;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: var(--secondary-color);
+  color: white;
+}
+/** LOGO SECTION **/
+.navbar-container > .logo-section {
+  align-items: center;
+  display: flex;
+  margin-left: 8px;
+}
+
+.navbar-container > .logo-section > .logo {
+  margin-left: 24px;
+  margin-right: 3px;
+  max-width: 28px;
+  max-height: 28px;
+}
+.navbar-container > .logo-section > .logo-text {
+  font-family: Roboto;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+.navbar-container > .logo-section > .country {
+  transform: translate(2px, -5px);
+  font-family: Roboto;
+  font-size: 10.5px;
+  color: rgb(180, 180, 180);
+}
+
+.navbar-container > .logo-section > .logo:hover,
+.navbar-container > .logo-section > .menu:hover,
+.navbar-container > .logo-section > .logo-text:hover {
+  cursor: pointer;
+}
+/** SEARCH SECTION **/
+.navbar-container > .search-section {
+  display: flex;
+}
+
+.navbar-container > .search-section > .searchbar {
+  border-radius: 3px 0px 0px 3px;
+  border: 1px solid #313131;
+  padding: 5px 10px;
+  width: 540px;
+  background-color: #121212;
+  color: white;
+}
+
+.navbar-container > .search-section > .searchbar:focus {
+  border: 1px solid #1c62b9;
+}
+.navbar-container > .search-section > .search-button {
+  position: relative;
+  display: flex;
+  border-radius: 0px 3px 3px 0px;
+  border: none;
+  padding: 4px 20px;
+  background-color: #313131;
+}
+
+.navbar-container > .search-section > .search-button::before {
+  content: 'Search';
+  border-radius: 3px;
+  left: 0px;
+  top: 0px;
+  padding: 10px 7px;
+  transition: opacity 100ms linear;
+  transform: translate(0px, 60px);
+  position: absolute;
+  background-color: #666666;
+  color: white;
+  font-size: 13px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.navbar-container > .search-section > .search-button:hover::before {
+  opacity: 1;
+}
+
+.navbar-container > .search-section > .search-button:hover {
+  cursor: pointer;
+}
+.navbar-container > .search-section > .search-button:hover > svg {
+  color: #858383;
+}
+.navbar-container > .search-section > .search-button > svg {
+  color: #666666;
+}
+/** ACTIONS SECTION **/
+.navbar-container > .action-section {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-container > .action-section > .record:hover,
+.navbar-container > .action-section > .apps:hover,
+.navbar-container > .action-section > .more:hover,
+.navbar-container > .action-section > .sign-in-button:hover {
+  cursor: pointer;
+}
+
+.navbar-container > .action-section > .sign-in-button {
+  display: inline-flex;
+  align-items: center;
+}
