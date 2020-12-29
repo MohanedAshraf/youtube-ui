@@ -3,7 +3,7 @@
   top: 0px;
   display: flex;
   justify-content: space-between;
-  padding: 16px;
+  padding: 10px 16px;
   background-color: var(--secondary-color);
   color: white;
 }
@@ -40,6 +40,7 @@
 /** SEARCH SECTION **/
 .navbar-container > .search-section {
   display: flex;
+  height: 34px;
 }
 
 .navbar-container > .search-section > .searchbar {
@@ -61,22 +62,7 @@
   border: none;
   padding: 4px 20px;
   background-color: #313131;
-}
-
-.navbar-container > .search-section > .search-button::before {
-  content: 'Search';
-  border-radius: 3px;
-  left: 0px;
-  top: 0px;
-  padding: 10px 7px;
-  transition: opacity 100ms linear;
-  transform: translate(0px, 60px);
-  position: absolute;
-  background-color: #666666;
-  color: white;
-  font-size: 13px;
-  opacity: 0;
-  pointer-events: none;
+  align-items: center;
 }
 
 .navbar-container > .search-section > .search-button:hover::before {
@@ -108,4 +94,38 @@
 .navbar-container > .action-section > .sign-in-button {
   display: inline-flex;
   align-items: center;
+  padding: 5px 10px;
+  background: none;
+  border-radius: 3px;
+  color: #3ea5ff;
+  border: 1px solid #3ea5ff;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Roboto;
+  letter-spacing: -1px;
+}
+
+.navbar-container > .action-section > .sign-in-button > svg {
+  margin-right: 5px;
+  font-size: 26px;
+}
+
+.navbar-container > .action-section > .more {
+  margin-right: 15px;
+  margin-left: 20px;
+}
+
+.navbar-container > .action-section > .apps {
+  margin-left: 20px;
+}
+
+.navbar-container > .action-section > .more,
+.navbar-container > .action-section > .apps,
+.navbar-container > .action-section > .record {
+  position: relative;
+
+  border: none;
+  padding: 0px;
+  background: none;
+  color: white;
 }

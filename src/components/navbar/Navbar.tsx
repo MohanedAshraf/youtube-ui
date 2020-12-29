@@ -6,6 +6,7 @@ import VideoCallIcon from '@material-ui/icons/VideoCall';
 import AppsIcon from '@material-ui/icons/Apps';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import LabelButton from '../labelButton/LabelButton';
 
 export default function Navbar() {
   return (
@@ -18,14 +19,29 @@ export default function Navbar() {
       </div>
       <div className="search-section">
         <input className="searchbar" placeholder="Search" />
-        <button className="search-button">
-          <SearchIcon />
-        </button>
+        <LabelButton
+          label="Search"
+          className="search-button"
+          content={<SearchIcon />}
+        />
       </div>
       <div className="action-section">
-        <VideoCallIcon className="record" />
-        <AppsIcon className="apps" />
-        <MoreVertIcon className="more" />
+        <LabelButton
+          label="Create"
+          className="record"
+          content={<VideoCallIcon />}
+        />
+        <LabelButton
+          label="Youtube Apps"
+          className="apps"
+          content={<AppsIcon />}
+        />
+        <LabelButton
+          label="Settings"
+          className="more"
+          content={<MoreVertIcon />}
+        />
+
         <button className="sign-in-button">
           <AccountCircleIcon />
           <span>SIGN IN</span>
