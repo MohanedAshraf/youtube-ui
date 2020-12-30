@@ -1,4 +1,5 @@
 .navbar-container {
+  grid-area: navbar;
   position: sticky;
   top: 0px;
   display: flex;
@@ -89,25 +90,6 @@
 .navbar-container > .action-section > .more:hover,
 .navbar-container > .action-section > .sign-in-button:hover {
   cursor: pointer;
-}
-
-.navbar-container > .action-section > .sign-in-button {
-  display: inline-flex;
-  align-items: center;
-  padding: 5px 10px;
-  background: none;
-  border-radius: 3px;
-  color: #3ea5ff;
-  border: 1px solid #3ea5ff;
-  font-size: 16px;
-  font-weight: 500;
-  font-family: Roboto;
-  letter-spacing: -1px;
-}
-
-.navbar-container > .action-section > .sign-in-button > svg {
-  margin-right: 5px;
-  font-size: 26px;
 }
 
 .navbar-container > .action-section > .more {

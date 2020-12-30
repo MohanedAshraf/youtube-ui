@@ -5,8 +5,9 @@ import SearchIcon from '@material-ui/icons/Search';
 import VideoCallIcon from '@material-ui/icons/VideoCall';
 import AppsIcon from '@material-ui/icons/Apps';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+
 import LabelButton from '../labelButton/LabelButton';
+import SignInButton from '../signinButton/SignInButton';
 
 export default function Navbar() {
   return (
@@ -41,11 +42,7 @@ export default function Navbar() {
           className="more"
           content={<MoreVertIcon />}
         />
-
-        <button className="sign-in-button">
-          <AccountCircleIcon />
-          <span>SIGN IN</span>
-        </button>
+        <SignInButton />
       </div>
     </nav>
   );
