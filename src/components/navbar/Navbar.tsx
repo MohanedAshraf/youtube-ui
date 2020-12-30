@@ -9,23 +9,34 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import LabelButton from '../labelButton/LabelButton';
 import SignInButton from '../signinButton/SignInButton';
 
-export default function Navbar() {
+interface Props {
+  searchValue: string;
+  setSearchValue: Function;
+}
+export default function Navbar({ searchValue, setSearchValue }: Props) {
   return (
     <nav className="navbar-container">
       <div className="logo-section">
         <MenuIcon className="menu" />
-        <img className="logo" src="assets/images/logo.png" alt="youtube logo" />
-        <span className="logo-text">Youtube</span>
-        <span className="country">EG</span>
+        <img className="logo" src="assets/images/logo.png" alt="website logo" />
+        <span className="logo-text">YouTube</span>
+        <span className="country">NL</span>
       </div>
+
       <div className="search-section">
-        <input className="searchbar" placeholder="Search" />
+        <input
+          className="searchbar"
+          placeholder="Search"
+          value={searchValue}
+          onChange={(e) => setSearchValue(e.target.value)}
+        />
         <LabelButton
           label="Search"
           className="search-button"
           content={<SearchIcon />}
         />
       </div>
+
       <div className="action-section">
         <LabelButton
           label="Create"
@@ -33,7 +44,7 @@ export default function Navbar() {
           content={<VideoCallIcon />}
         />
         <LabelButton
-          label="Youtube Apps"
+          label="YouTube Apps"
           className="apps"
           content={<AppsIcon />}
         />
@@ -42,6 +53,7 @@ export default function Navbar() {
           className="more"
           content={<MoreVertIcon />}
         />
+
         <SignInButton />
       </div>
     </nav>

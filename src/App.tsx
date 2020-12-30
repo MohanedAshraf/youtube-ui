@@ -1,16 +1,17 @@
-import React from 'react';
-
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import ContentSection from './components/content-section/ContentSection';
 import Navbar from './components/navbar/Navbar';
 import Sidebar from './components/sidebar/Sidebar';
+import ContentSection from './components/content-section/ContentSection';
 
 function App() {
+  const [searchValue, setSearchValue] = useState('');
+
   return (
     <div className="app-container">
-      <Navbar />
+      <Navbar searchValue={searchValue} setSearchValue={setSearchValue} />
       <Sidebar />
-      <ContentSection />
+      <ContentSection searchValue={searchValue} />
     </div>
   );
 }
